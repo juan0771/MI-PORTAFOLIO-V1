@@ -457,6 +457,57 @@ body {
     box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
 }
 
+/* SECCIÓN CLIENTES & MARCAS */
+.clients-section {
+    padding: 60px 5%;
+}
+
+.brand-card {
+    width: 280px;
+    height: 200px;
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid var(--lime-accent);
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.2);
+    animation: electric-glow 3s infinite ease-in-out;
+    transition: var(--transition-smooth);
+}
+
+.brand-logo-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.8rem;
+}
+
+.brand-logo-container img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(1.2);
+    transition: var(--transition-smooth);
+}
+
+.brand-card:hover img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.05);
+}
+
+.brand-card p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin: 0;
+}
+
 /* CONTACTO */
 .contact-section {
     padding: 80px 5%;
