@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = originalCount; // Empezar en la primera tarjeta del set real
 
         const getVisibleCards = () => {
-            if (window.innerWidth < 768) return 1;
-            if (window.innerWidth < 1024) return 2;
-            return 3;
+            const containerWidth = track.parentElement.offsetWidth;
+            const cardWidth = originalCards[0].offsetWidth;
+            return Math.max(1, Math.floor(containerWidth / (cardWidth + 32)));
         };
 
         const moveCarousel = (transition = true) => {
@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel('clientTrack', 'clientPrev', 'clientNext', 'clientDots');
     initCarousel('personalTrack', 'personalPrev', 'personalNext', 'personalDots');
     initCarousel('servicesTrack', 'servicesPrev', 'servicesNext', 'serviceDots');
+    initCarousel('brandTrack', 'brandPrev', 'brandNext', 'brandDots');
 
 
     // ENVÍO DEL FORMULARIO DE CONTACTO ÁGIL
